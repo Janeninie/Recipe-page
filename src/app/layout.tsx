@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { IBM_Plex_Sans_Thai, Outfit, Young_Serif } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const ibm = IBM_Plex_Sans_Thai({
+  subsets: ["thai"],
+  weight: ["100", "500", "700"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const youngSerif = Young_Serif({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,11 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${outfit.className} antialiased`}>{children}</body>
     </html>
   );
 }
