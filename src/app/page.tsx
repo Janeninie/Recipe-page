@@ -3,18 +3,29 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen sm:p-20 bg-stone-100">
-      <section className="sm:max-w-screen-md mx-auto flex flex-col sm:gap-10 bg-white rounded-3xl p-10">
+      <section className="sm:hidden sm:max-w-screen-md mx-auto flex flex-col sm:gap-10 bg-white sm:rounded-3xl sm:p-10">
         <div>
           <Image
             src={"/images/image-omelette.jpeg"}
             width={800}
             height={600}
             alt="omelette"
-            className="rounded-2xl w-full object-cover"
+            className="sm:rounded-2xl w-full object-cover"
           />
         </div>
-        <div className="flex flex-col gap-6">
-          <div className="sm:text-4xl font-young text-stone-900">
+      </section>
+      <section className="sm:max-w-screen-md mx-auto flex flex-col sm:gap-10 gap-8 bg-white sm:rounded-3xl p-10">
+        <div>
+          <Image
+            src={"/images/image-omelette.jpeg"}
+            width={800}
+            height={600}
+            alt="omelette"
+            className="sm:rounded-2xl w-full object-cover hidden sm:block"
+          />
+        </div>
+        <div className="flex flex-col sm:gap-6 gap-4">
+          <div className="text-4xl font-young text-stone-900">
             Simple omelette recipe
           </div>
           <div className="text-paragraph text-stone-600">
@@ -24,7 +35,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="sm:p-6 rounded-xl flex flex-col sm:gap-1 w-full bg-rose-50">
+        <div className="p-6 rounded-xl flex flex-col sm:gap-1 w-full bg-rose-50">
           <div className="text-xl font-semibold text-rose-800 mb-1">
             Preparation time
           </div>
@@ -43,7 +54,7 @@ export default function Home() {
             5 minutes
           </li>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col sm:gap-6 gap-4">
           <div className="text-3xl font-young text-brown-800 ">Ingredients</div>
           <ul className="flex flex-col gap-1 text-stone-600 list-disc list-inside">
             <li>
@@ -66,12 +77,12 @@ export default function Home() {
           </ul>
         </div>
         <hr className="border-b-1 border-stone-150" />
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col sm:gap-6 gap-4">
           <div className="text-3xl font-young text-brown-800">Instructions</div>
           <div className="flex flex-col gap-2 text-stone-600">
             <div className="flex">
-              <div className="w-[7%] pl-2 font-semibold">1.</div>
-              <div className="w-[93%]">
+              <div className="sm:w-[7%] w-[10%] pl-2 font-semibold">1.</div>
+              <div className="sm:w-[93%] w-[90%]">
                 <span className=" font-semibold">Beat the eggs:</span> In a
                 bowl, beat the eggs with a pinch of salt and pepper until they
                 are well mixed. You can add a tablespoon of water or milk for a
@@ -80,16 +91,16 @@ export default function Home() {
             </div>
 
             <div className="flex">
-              <div className="w-[7%] pl-2 font-semibold">2.</div>
-              <div className="w-[93%]">
+              <div className="sm:w-[7%] w-[10%] pl-2 font-semibold">2.</div>
+              <div className="sm:w-[93%] w-[90%]">
                 <span className=" font-semibold">Heat the pan:</span> Place a
                 non-stick frying pan over medium heat and add butter or oil.
               </div>
             </div>
 
             <div className="flex">
-              <div className="w-[7%] pl-2 font-semibold">3.</div>
-              <div className="w-[93%]">
+              <div className="sm:w-[7%] w-[10%] pl-2 font-semibold">3.</div>
+              <div className="sm:w-[93%] w-[90%]">
                 <span className=" font-semibold">Cook the omelette:</span> Once
                 the butter is melted and bubbling, pour in the eggs. Tilt the
                 pan to ensure the eggs evenly coat the surface.
@@ -97,8 +108,8 @@ export default function Home() {
             </div>
 
             <div className="flex">
-              <div className="w-[7%] pl-2 font-semibold">4.</div>
-              <div className="w-[93%]">
+              <div className="sm:w-[7%] w-[10%] pl-2 font-semibold">4.</div>
+              <div className="sm:w-[93%] w-[90%]">
                 <span className=" font-semibold">Add fillings (optional):</span>{" "}
                 When the eggs begin to set at the edges but are still slightly
                 runny in the middle, sprinkle your chosen fillings over one half
@@ -107,8 +118,8 @@ export default function Home() {
             </div>
 
             <div className="flex">
-              <div className="w-[7%] pl-2 font-semibold">5.</div>
-              <div className="w-[93%]">
+              <div className="sm:w-[7%] w-[10%] pl-2 font-semibold">5.</div>
+              <div className="sm:w-[93%] w-[90%]">
                 <span className=" font-semibold">Fold and serve:</span> As the
                 omelette continues to cook, carefully lift one edge and fold it
                 over the fillings. Let it cook for another minute, then slide it
@@ -117,8 +128,8 @@ export default function Home() {
             </div>
 
             <div className="flex">
-              <div className="w-[7%] pl-2 font-semibold">6.</div>
-              <div className="w-[93%]">
+              <div className="sm:w-[7%] w-[10%] pl-2 font-semibold">6.</div>
+              <div className="sm:w-[93%] w-[90%]">
                 <span className=" font-semibold">Enjoy:</span> Serve hot, with
                 additional salt and pepper if needed.
               </div>
@@ -126,7 +137,7 @@ export default function Home() {
           </div>
         </div>
         <hr className="border-b-1 border-stone-150" />
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col sm:gap-6 gap-4">
           <div className="text-3xl font-young text-brown-800">Nutrition</div>
           <div className="text-stone-600">
             The table below shows nutritional values per serving without the
